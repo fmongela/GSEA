@@ -7,7 +7,7 @@ library(dplyr)
 # load microarray results
 ResultsTable_DE <- read_excel(here("data","ResultsTable_DE.xlsx"))
 
-load agilent chip decription 
+# load agilent chip decription 
 chip_list <- readr::read_delim(
   "D:/smyl/Labo/Mouse/KO_NCL/Transcriptomics/Agilent/028005/028005_mm1_1747914873788/GeneList/028005_D_GeneList_20240520.txt",
   delim = "\t")
