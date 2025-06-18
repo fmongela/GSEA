@@ -1,8 +1,12 @@
+
+
 rm(list = ls()) # Clear datalist.
 
 library(here)
 library(readr)
+library(readxl)
 library(dplyr)
+
 
 # load microarray results
 ResultsTable_DE <- read_excel(here("data","ResultsTable_DE.xlsx"))
