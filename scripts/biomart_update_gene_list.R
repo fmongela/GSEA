@@ -3,6 +3,7 @@
 # Hopefully will help with subsequent GSEA
 
 # Load biomaRt
+library(clipr)
 library(tidyverse)
 library(readxl)
 library(here)
@@ -102,4 +103,5 @@ Protein_coding_GSEA_set <- Protein_coding_GSEA_set %>%
   dplyr::select(-adj.P.Val_expe_controle)
 
 # 6. Save updated data
-write_tsv(tibble_for_GSEA, here("results", "updated_expression_data.txt"))
+write_delim (dplyr::select(Protein_coding_GSEA_set, Name), delim = ",", here("results", "Protein_coding_GSEA_set.csv"))
+write_delim (dplyr::select(lncRNA_GSEA_set, Name), delim = ",", here("results", "lncRNA_GSEA_set.csv"))
